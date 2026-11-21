@@ -11,7 +11,7 @@ meet my one-sheet portfolio for a hackclub's phantom program, programmed in 3h 1
 - and support the projects i support :) https://github.com/h0tp-ftw/ankimon (EXPERIMENTAL - bleeding edge - where you'll see me contributing around), https://github.com/Unlucky-Life/ankimon (ANKIWEB version)
 - andddd i've a YouTube channel! *unfurls the cloth on the dish with a brandish* https://www.youtube.com/@nuzealous
 
-i'll do the tedious stuff YouTubers kindly ask their awed users - please like i'll hand you a cookie and pleasee subscribe i'll materialise a metaphorical bear hug. even if my videos have you bearing with me. ummm if you've never watched, you'll never know. *winks*
+i'll do the tedious stuff YouTubers kindly ask their awed users - please like i'll hand you a cookie and pleasee subscribe i'll materialise a metaphorical bear hug, even if my videos have you bearing with me. ummm if you've never watched, you'll never know. *winks*
 
 now that you've not only came here but also read to the end, why not star the repo and gimme a follow (only if kind you really think this humbly deserves that all, of course)
 
