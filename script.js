@@ -7,17 +7,20 @@ function getRandomItem(arr) {
     return arr[randomIndex];
 }
 
-function getGreetingPair() {
-    let greetingA = getRandomItem(greetings);
-    let greetingB = getRandomItem(greetings);
-
-    while (greetingA === greetingB && greetings.length > 1) {
-        greetingB = getRandomItem(greetings);
+function getFourWordSequence() {
+    let words = [];
+    while (words.length < 4) {
+        let word = getRandomItem(greetings);
+        if (!words.includes(word)) {
+            words.push(word);
+        }
     }
 
-    let randomSymbol = getRandomItem(symbols);
+    let sym1 = getRandomItem(symbols);
+    let sym2 = getRandomItem(symbols);
+    let sym3 = getRandomItem(symbols);
 
-    return `${greetingA} ${randomSymbol} ${greetingB}`;
+    return `${words[0]} ${sym1} ${words[1]} ${sym2} ${words[2]} ${sym3} ${words[3]}`;
 }
 
 function sleep(ms) {
@@ -26,17 +29,15 @@ function sleep(ms) {
 
 async function runAnimation() {
     while (true) {
-        const fullText = getGreetingPair();
+        const fullText = getFourWordSequence();
         container.innerHTML = "";
         const letterSpans = [];
 
-        for (let i=0; i < fullText.length; i++) {
+        for (let i = 0; i < fullText.length; i++) {
             const span = document.createElement("span");
             span.textContent = fullText[i];
             
             if (fullText[i] === " ") {
-                span.className = "inline-block mx-1";
-            } else if (symbols.includes(fullText[i])) {
                 span.className = "inline-block mx-1";
             } else {
                 span.className = "letter-block inline-block";
@@ -47,12 +48,12 @@ async function runAnimation() {
             await sleep(90);
         }
 
-        await sleep(1400);
+        await sleep(1800);
 
         letterSpans.forEach((span, index) => {
             setTimeout(() => {
                 span.classList.add("dissipate");
-            }, index * 45);
+            }, index * 35);
         });
         await sleep(800);
     }
