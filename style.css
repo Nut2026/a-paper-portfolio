@@ -1,3 +1,27 @@
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('assets/fonts/OpenDyslexic-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('assets/fonts/OpenDyslexic-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.dyslexic-theme, 
+.dyslexic-theme body, 
+.dyslexic-theme h1, 
+.dyslexic-theme h2, 
+.dyslexic-theme p, 
+.dyslexic-theme span, 
+.dyslexic-theme figcaption {
+    font-family: 'OpenDyslexic', sans-serif !important;
+}
+
 .paper-plane-loop {
     position: absolute;
     top: 0;
@@ -6,7 +30,11 @@
     height: 100px;
     offset-path: rect(0px auto auto 0px);
     offset-rotate: auto;
-    animation: flyAround 15s linear infinite;
+    animation: flyAround 17s linear infinite;
+}
+
+.paper-plane-loop.paused {
+    animation-play-state: paused;
 }
 
 @keyframes flyAround {

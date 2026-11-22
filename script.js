@@ -60,3 +60,30 @@ async function runAnimation() {
 }
 
 runAnimation();
+
+let currentState = 0;
+const trackElement = document.getElementById("plane-track");
+const planeElement = document.querySelector(".paper-plane-loop");
+
+trackElement.addEventListener("click", () => {
+    currentState = (currentState + 1) % 4;
+
+    switch (currentState) {
+        case 0:
+            document.body.classList.remove("dyslexic-theme");
+            planeElement.classList.remove("paused");
+            break;
+        case 1:
+            document.body.classList.add("dyslexic-theme");
+            planeElement.classList.remove("paused");
+            break;
+        case 2:
+            document.body.classList.add("dyslexic-theme");
+            planeElement.classList.add("paused");
+            break;
+        case 3:
+            document.body.classList.remove("dyslexic-theme");
+            planeElement.classList.add("paused");
+            break;
+    }
+});
