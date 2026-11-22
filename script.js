@@ -1,4 +1,4 @@
-const greetings = ["hi", "hello", "hey", "heya", "hiya", "howdy", 'happily'];
+const programmingTerms = ["try-except", "yield", "get", "return", "Math.random()", "arr.length", 'let j'];
 const symbols = ["+", "-", "*", "/", "%", "^", "&", "(", ")", "="];
 const container = document.getElementById("intro-text");
 
@@ -10,7 +10,7 @@ function getRandomItem(arr) {
 function getFourWordSequence() {
     let words = [];
     while (words.length < 4) {
-        let word = getRandomItem(greetings);
+        let word = getRandomItem(programmingTerms);
         if (!words.includes(word)) {
             words.push(word);
         }
