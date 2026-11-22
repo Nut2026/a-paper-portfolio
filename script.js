@@ -1,9 +1,23 @@
 const greetings = ["hi", "hello", "hey", "heya", "hiya", "howdy", 'happily'];
+const symbols = ["+", "-", "*", "/", "%", "^", "&", "(", ")", "="];
 const container = document.getElementById("intro-text");
 
-function getRandomGreeting(){
-    const randomIndex = Math.floor(Math.random() * greetings.length);
-    return greetings[randomIndex];
+function getRandomItem(arr) {
+    const randomIndex = Math.floor(Math.random() * arr.length);
+    return arr[randomIndex];
+}
+
+function getGreetingPair() {
+    let greetingA = getRandomItem(greetings);
+    let greetingB = getRandomItem(greetings);
+
+    while (greetingA === greetingB && greetings.length > 1) {
+        greetingB = getRandomItem(greetings);
+    }
+
+    let randomSymbol = getRandomItem(symbols);
+
+    return `${greetingA} ${randomSymbol} ${greetingB}`;
 }
 
 function sleep(ms) {
@@ -11,25 +25,26 @@ function sleep(ms) {
 }
 
 async function runAnimation() {
-    let previousWord = "";
     while (true) {
-        let word = getRandomGreeting();
-
-        while (word === previousWord && greetings.length > 1) {
-            word = getRandomGreeting();
-        }
-        previousWord = word;
-
+        const fullText = getGreetingPair();
         container.innerHTML = "";
         const letterSpans = [];
 
-        for (let i=0; i < word.length; i++) {
+        for (let i=0; i < fullText.length; i++) {
             const span = document.createElement("span");
-            span.textContent = word[i];
-            span.className = "letter-block bg-amber-200 text-yellow-950 px-1.5 py-0.5-mx-[2px] rounded border-2 border-yellow-950 shadow-[2px_2px_0px_#422006]"
+            span.textContent = fullText[i];
+            
+            if (fullText[i] === " ") {
+                span.className = "inline-block mx-1";
+            } else if (symbols.includes(fullText[i])) {
+                span.className = "inline-block font-bold px-1.5 py-0.5 text-yellow-900 bg-amber-300 rounded border-2 border-yellow-950 shadow-[2px_2px_0px_0px_#422006]";
+            } else {
+                span.className = "letter-block bg-amber-200 text-yellow-950 px-1.5 py-0.5 mx-[1px] rounded border-2 border-yellow-950 shadow-[2px_2px_0px_0px_#422006]";
+            }
+            
             container.appendChild(span);
             letterSpans.push(span);
-            await sleep(120);
+            await sleep(90);
         }
 
         await sleep(1400);
