@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>A Paper Portfolio</title>
-        <link rel="icon" type="image/svg+xml" href="assets/icons/paper-plane.svg">
+        <link rel="icon" type="image/svg+xml" href="assets/icons/paper-plane-favicon.svg">
+        <link rel="stylesheet" href="style.css">
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body class="relative p-10 min-h-screen bg-gradient-to-br from-orange-900 to-amber-600 text-amber-50 overflow-x-hidden">
@@ -14,41 +15,53 @@
             <header class="max-w-5xl bg-yellow-50 text-yellow-950 border-4 border-yellow-950 shadow-[8px_8px_0px_0px_#422006] p-8 m-16 cursor-pointer transition-all duration-150 active:translate-x-[8px] active:translate-y-[8px] active:shadow-none">
                 <h1 class="text-yellow-600 text-5xl font-bold">A paper portfolio in a paper porfolio</h1>
                 <br>
-                <p id='intro-text' class="text-2xl font-mono min-h-[2.5rem] flex items-center flex-wrap"></p>
+                <p id="intro-text" class="text-2xl font-mono min-h-[2.5rem] flex items-center flex-wrap"></p>
             </header>
 
-            <section class="max-w-5xl ml-auto bg-yellow-50 text-yellow-950 border-4 border-yellow-950 shadow-[-10px_10px_0px_0px_#422006] p-8 flex flex-col items-end cursor-pointer transition-all duration-150 active:-translate-x-[10px] active:translate-y-[10px] active:shadow-none">
-                <h2 class="text-yellow-500 text-4xl text-right font-bold">About me</h2>
-                <br>
-                <p class="text-2xl text-right font-semibold max-w-4xl transition-colors duration-150 hover:text-blue-900">
-                    I'm Nuz Zealous, a pre-U student aspiring to be a full-stack developer! - one who turns a single-line pitch into a standout product =D
-                </p>
-                <br><br>
-                <div class="max-w-4xl ml-auto px-8 flex flex-col items-end gap-16">
-
-                    <div class="flex justify-end items-start gap-16">
-                    <figure class="w-[350px] text-right">
-                        <img src="assets/images/flush.svg" alt="Flush: Happily a flashcard app" class="w-[350px] h-[350px] object-cover">
-                        <figcaption>This is the logo of my first hackathon app - happily a flashcard app: Flush!</figcaption>
-                    </figure>
-
-                    <figure class="w-[350px] text-right">
-                        <img src="assets/images/nuz.svg" alt="Guess-it-yes: My profile picture" class="w-[350[px] h-[350px] object-cover">
-                        <figcaption>Ladies first, gentlemen second. App first, self second: meet my pfp - you'll know me when you see it!</figcaption>
-                    </figure>
-                    </div>
-
-                    <figure class="w-[764px] text-right">
-                        <img src="assets/images/header.png" alt="A __case: My go-to header" class="w-full h-[250px] object-cover rounded-lg shadow-lg mx-auto">
-                        <figcaption class="mt-3">Meet my go-to header! You'll see it on YouTube, Devpost, and more. Believe it or not, it's my pi 3.1415927 - You guessed it! It's my pillowcase!</figcaption>
-                    </figure>
-
-                    <figure class="w-[525px] text-right">
-                        <img src="assets/images/python-a-pygrammer-poem.jpg" alt="Python - A Pygrammer Poem" class="w-full h-auto rounded-lg shadow-lg mx-auto">
-                        <figcaption class="mt-3">You read it, you knew it. Feel free to read it from top to bottom, maybe reread it once or thrice, but more importantly, feel, and enjoy!</figcaption>
-                    </figure>
+            <div class="w-full flex flex-col lg:flex-row items-center justify-between gap-12 mt-4">
+                
+                <div class="relative w-[220px] h-[1710px] border-[10px] border-yellow-50 flex-shrink-0 mx-auto lg:ml-16">
+                    <img 
+                        src="assets/images/paper-plane.svg" 
+                        alt="Loop, paper plane, loop with ambition!" 
+                        class="paper-plane-loop"
+                    >
                 </div>
-            </section>
+
+                <section class="max-w-5xl ml-auto bg-yellow-50 text-yellow-950 border-4 border-yellow-950 shadow-[-10px_10px_0px_0px_#422006] p-8 flex flex-col items-end cursor-pointer transition-all duration-150 active:-translate-x-[10px] active:translate-y-[10px] active:shadow-none">
+                    <h2 class="text-yellow-500 text-4xl text-right font-bold">About me</h2>
+                    <br>
+                    <p class="text-2xl text-right font-semibold max-w-4xl transition-colors duration-150 hover:text-blue-900">
+                        I'm Nuz Zealous, a pre-U student aspiring to be a full-stack developer! - one who turns a single-line pitch into a standout product =D
+                    </p>
+                    <br><br>
+                    <div class="max-w-4xl ml-auto px-8 flex flex-col items-end gap-16">
+
+                        <div class="flex justify-end items-start gap-16">
+                            <figure class="w-[350px] text-right">
+                                <img src="assets/images/flush.svg" alt="Flush: Happily a flashcard app" class="w-[350px] h-[350px] object-cover">
+                                <figcaption>This is the logo of my first hackathon app - happily a flashcard app: Flush!</figcaption>
+                            </figure>
+
+                            <figure class="w-[350px] text-right">
+                                <img src="assets/images/nuz.svg" alt="Guess-it-yes: My profile picture" class="w-[350px] h-[350px] object-cover">
+                                <figcaption>Ladies first, gentlemen second. App first, self second: meet my pfp - you'll know me when you see it!</figcaption>
+                            </figure>
+                        </div>
+
+                        <figure class="w-[764px] text-right">
+                            <img src="assets/images/header.png" alt="A __case: My go-to header" class="w-full h-[250px] object-cover rounded-lg shadow-lg mx-auto">
+                            <figcaption class="mt-3">Meet my go-to header! You'll see it on YouTube, Devpost, and more. Believe it or not, it's my pi 3.1415927 - You guessed it! It's my pillowcase!</figcaption>
+                        </figure>
+
+                        <figure class="w-[525px] text-right">
+                            <img src="assets/images/python-a-pygrammer-poem.jpg" alt="Python - A Pygrammer Poem" class="w-full h-auto rounded-lg shadow-lg mx-auto">
+                            <figcaption class="mt-3">You read it, you knew it. Feel free to read it from top to bottom, maybe reread it once or thrice, but more importantly, feel, and enjoy!</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+            </div>
         </main>
         <script src="script.js"></script>
     </body>
