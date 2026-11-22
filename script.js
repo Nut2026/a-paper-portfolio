@@ -48,7 +48,7 @@ async function runAnimation() {
             await sleep(90);
         }
 
-        await sleep(1800);
+        await sleep(1500);
 
         letterSpans.forEach((span, index) => {
             setTimeout(() => {
