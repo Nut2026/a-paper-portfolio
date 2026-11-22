@@ -37,9 +37,9 @@ async function runAnimation() {
             if (fullText[i] === " ") {
                 span.className = "inline-block mx-1";
             } else if (symbols.includes(fullText[i])) {
-                span.className = "inline-block font-bold px-1.5 py-0.5 text-yellow-900 bg-amber-300 rounded border-2 border-yellow-950 shadow-[2px_2px_0px_0px_#422006]";
+                span.className = "inline-block mx-1";
             } else {
-                span.className = "letter-block bg-amber-200 text-yellow-950 px-1.5 py-0.5 mx-[1px] rounded border-2 border-yellow-950 shadow-[2px_2px_0px_0px_#422006]";
+                span.className = "letter-block inline-block";
             }
             
             container.appendChild(span);
