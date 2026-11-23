@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="2.2342593"
-     inkscape:cx="189.77207"
-     inkscape:cy="104.95649"
+     inkscape:zoom="17.874074"
+     inkscape:cx="237.8305"
+     inkscape:cy="147.39225"
      inkscape:window-width="1600"
      inkscape:window-height="829"
      inkscape:window-x="1592"
@@ -60,16 +60,20 @@
       <g
          id="g5"
          transform="translate(-4.0016555e-7,4.0098839)">
-        <path
-           style="fill:#0e1626;fill-opacity:1;stroke:#f57a5d;stroke-width:5.0874;stroke-dasharray:none;stroke-opacity:1"
-           d="M 60.005861,38.970178 20.299211,18.072833 8.1268981,37.828099 Z"
-           id="path4"
-           sodipodi:nodetypes="cccc" />
-        <path
-           style="fill:#0e1626;fill-opacity:1;stroke:#f57a5d;stroke-width:5.0874;stroke-dasharray:none;stroke-opacity:1"
-           d="M 60.003867,38.970178 19.41605,58.099897 8.1249045,37.828099 Z"
-           id="path4-8"
-           sodipodi:nodetypes="cccc" />
+        <g
+           id="g6"
+           transform="translate(-0.06106383,-0.11185024)">
+          <path
+             style="fill:#0e1626;fill-opacity:1;stroke:#f57a5d;stroke-width:5.0874;stroke-dasharray:none;stroke-opacity:1"
+             d="M 60.066923,38.7766 20.360273,17.879255 8.1879604,37.634521 Z"
+             id="path4"
+             sodipodi:nodetypes="cccc" />
+          <path
+             style="fill:#0e1626;fill-opacity:1;stroke:#f57a5d;stroke-width:5.0874;stroke-dasharray:none;stroke-opacity:1"
+             d="M 60.061042,38.7766 19.473225,57.906319 8.1820801,37.634521 Z"
+             id="path4-8"
+             sodipodi:nodetypes="cccc" />
+        </g>
       </g>
     </g>
   </g>
