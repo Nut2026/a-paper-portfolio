@@ -45,3 +45,13 @@
         offset-distance: 100%;
     }
 }
+
+.todo-item.completed .checkmark {
+    transform: scale(1);
+}
+
+.todo-item.completed .todo-text {
+    background-color: #a2c3c8;
+    color: transparent;
+    user-select: none;
+}

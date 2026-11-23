@@ -17,10 +17,47 @@
         <div id="three-container" class="fixed inset-0 z-50 hidden cursor-grab active:cursor-grabbing"></div>
 
         <main id="portfolio-content" class="w-full max-w-[1450px] mx-auto flex flex-col transition-opacity duration-300">
-            <header class="max-w-5xl bg-yellow-50 text-yellow-950 border-4 border-yellow-950 shadow-[8px_8px_0px_0px_#422006] p-8 m-16 cursor-pointer transition-all duration-150 active:translate-x-[8px] active:translate-y-[8px] active:shadow-none">
+            <header class="max-w-5xl bg-yellow-50 text-yellow-950 border-4 border-yellow-950 shadow-[8px_8px_0px_0px_#422006] p-8 m-16">
                 <h1 class="text-yellow-600 text-5xl font-bold">A paper portfolio in a paper porfolio</h1>
-                <br>
-                <p id="intro-text" class="text-2xl font-mono min-h-[2.5rem] flex items-center flex-wrap"></p>
+                <div class="mt-4">
+                    <p id="intro-text" class="text-2xl font-mono min-h-[2.5rem] flex items-center flex-wrap"></p>
+                </div>
+                
+                <div class="w-full flex flex-col mt-4">
+                    <h3 class="text-yellow-600 text-2xl font-bold mb-2">to-do list:</h3>
+                    <ul class="w-full flex flex-col gap-2">
+                        <li class="flex items-center gap-4 text-xl font-semibold cursor-pointer select-none todo-item">
+                            <div class="custom-checkbox w-6 h-6 border-2 border-[#a2c3c8] bg-transparent flex items-center justify-center transition-colors duration-150">
+                                <div class="checkmark w-3 h-3 bg-[#0e1626] scale-0 transition-transform duration-150"></div>
+                            </div>
+                            <span class="todo-text relative inline-block transition-colors duration-150">spam that giant button that do nothing but bounce</span>
+                        </li>
+                        <li class="flex items-center gap-4 text-xl font-semibold cursor-pointer select-none todo-item">
+                            <div class="custom-checkbox w-6 h-6 border-2 border-[#a2c3c8] bg-white flex items-center justify-center transition-colors duration-150">
+                                <div class="checkmark w-3 h-3 bg-[#0e1626] scale-0 transition-transform duration-150"></div>
+                            </div>
+                            <span class="todo-text relative inline-block transition-colors duration-150">turn my name blue</span>
+                        </li>
+                        <li class="flex items-center gap-4 text-xl font-semibold cursor-pointer select-none todo-item">
+                            <div class="custom-checkbox w-6 h-6 border-2 border-[#a2c3c8] bg-white flex items-center justify-center transition-colors duration-150">
+                                <div class="checkmark w-3 h-3 bg-[#0e1626] scale-0 transition-transform duration-150"></div>
+                            </div>
+                            <span class="todo-text relative inline-block transition-colors duration-150">stop the homemade plane</span>
+                        </li>
+                        <li class="flex items-center gap-4 text-xl font-semibold cursor-pointer select-none todo-item">
+                            <div class="custom-checkbox w-6 h-6 border-2 border-[#a2c3c8] bg-white flex items-center justify-center transition-colors duration-150">
+                                <div class="checkmark w-3 h-3 bg-[#0e1626] scale-0 transition-transform duration-150"></div>
+                            </div>
+                            <span class="todo-text relative inline-block transition-colors duration-150">be the captain of your own plane!!</span>
+                        </li>
+                        <li class="flex items-center gap-4 text-xl font-semibold cursor-pointer select-none todo-item">
+                            <div class="custom-checkbox w-6 h-6 border-2 border-[#a2c3c8] bg-white flex items-center justify-center transition-colors duration-150">
+                                <div class="checkmark w-3 h-3 bg-[#0e1626] scale-0 transition-transform duration-150"></div>
+                            </div>
+                            <span class="todo-text relative inline-block transition-colors duration-150">say hi on the only place we can say hi! i don't bite if you actually try</span>
+                        </li>
+                    </ul>
+                </div>
             </header>
 
             <div class="w-full flex flex-col lg:flex-row items-center justify-between gap-12 mt-4">

@@ -258,3 +258,10 @@ document.addEventListener("DOMContentLoaded", () => {
         renderer.setSize(window.innerWidth, window.innerHeight);
     });
 });
+
+document.querySelectorAll(".todo-item").forEach(item => {
+    item.addEventListener("click", (e) => {
+        e.stopPropagation();
+        item.classList.toggle("completed");
+    });
+});
