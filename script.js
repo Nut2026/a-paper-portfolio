@@ -214,41 +214,59 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     animate();
 
-    document.addEventListener("dblclick", async (e) => {
+    let clickCount = 0;
+    let clickTimer = null;
+
+    document.addEventListener("click", async (e) => {
         if (e.target.tagName === "A" || e.target.closest("a") || isAnimating) return;
 
-        if (!isFolded) {
-            const canvas = await html2canvas(portfolioContent, {
-                backgroundColor: null,
-                scale: 1,
-                useCORS: true
-            });
-            const texture = new THREE.CanvasTexture(canvas);
-            texture.anisotropy = renderer.capabilities.getMaxAnisotropy();
+        clickCount++;
+        clearTimeout(clickTimer);
 
-            if (planeMesh) {
-                scene.remove(planeMesh);
-                planeMesh.geometry.dispose();
-                planeMesh.material.dispose();
+        if (clickCount === 4) {
+            clickCount = 0;
+
+            if (!isFolded) {
+                const canvas = await html2canvas(portfolioContent, {
+                    backgroundColor: "#fefce8",
+                    scale: 1,
+                    useCORS: true,
+                    allowTaint: true,
+                    logging: false
+                });
+
+                const texture = new THREE.CanvasTexture(canvas);
+                texture.encoding = THREE.sRGBEncoding;
+                texture.needsUpdate = true;
+
+                if (planeMesh) {
+                    scene.remove(planeMesh);
+                    planeMesh.geometry.dispose();
+                    planeMesh.material.dispose();
+                }
+
+                planeMesh = createOrigamiPlane(texture);
+                scene.add(planeMesh);
+
+                camera.position.set(0, 3.2, 6.5);
+                controls.target.set(0, 0, 0);
+                controls.update();
+
+                portfolioContent.style.opacity = "0";
+                portfolioContent.style.pointerEvents = "none";
+                threeContainer.classList.remove("hidden");
+
+                isFolded = true;
+                foldProgress = 0;
+                isAnimating = true;
+            } else {
+                isFolded = false;
+                isAnimating = true;
             }
-
-            planeMesh = createOrigamiPlane(texture);
-            scene.add(planeMesh);
-
-            camera.position.set(0, 3.2, 6.5);
-            controls.target.set(0, 0, 0);
-            controls.update();
-
-            portfolioContent.style.opacity = "0";
-            portfolioContent.style.pointerEvents = "none";
-            threeContainer.classList.remove("hidden");
-
-            isFolded = true;
-            foldProgress = 0;
-            isAnimating = true;
         } else {
-            isFolded = false;
-            isAnimating = true;
+            clickTimer = setTimeout(() => {
+                clickCount = 0;
+            }, 600);
         }
     });
 
