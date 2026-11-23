@@ -7,11 +7,16 @@
         <link rel="icon" type="image/svg+xml" href="assets/icons/paper-plane-favicon.svg">
         <link rel="stylesheet" href="style.css">
         <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     </head>
     <body class="relative p-10 min-h-screen bg-gradient-to-br from-orange-900 to-amber-600 text-amber-50 overflow-x-hidden">
         <div class="fixed -bottom-32 -left-32 w-[500px] h-[500px] rounded-full bg-yellow-700/40 blur-3xl pointer-events-none -z-10"></div>
         
-        <main class="w-full max-w-[1450px] mx-auto flex flex-col">
+        <div id="three-container" class="fixed inset-0 z-50 hidden cursor-grab active:cursor-grabbing"></div>
+
+        <main id="portfolio-content" class="w-full max-w-[1450px] mx-auto flex flex-col transition-opacity duration-300">
             <header class="max-w-5xl bg-yellow-50 text-yellow-950 border-4 border-yellow-950 shadow-[8px_8px_0px_0px_#422006] p-8 m-16 cursor-pointer transition-all duration-150 active:translate-x-[8px] active:translate-y-[8px] active:shadow-none">
                 <h1 class="text-yellow-600 text-5xl font-bold">A paper portfolio in a paper porfolio</h1>
                 <br>
