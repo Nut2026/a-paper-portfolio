@@ -1,6 +1,6 @@
 ## a-paper-portfolio
 
-meet my one-sheet portfolio for a hackclub's phantom program, programmed in 3h 15min or less!
+meet a one-sheet portfolio, programmed in 3h 15min or less!
 
 ### a bit more about me
 - https://github.com/Nut2026/Nut2026 does the showing
